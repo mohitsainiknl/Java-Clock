@@ -3,6 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src/javaclock"/>
 	<classpathentry kind="src" path="res"/>
-	<classpathentry kind="lib" path="artifacts\Java-Clock_jar/Java-Clock.jar"/>
+	<classpathentry kind="lib" path="publish/Java-Clock.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
