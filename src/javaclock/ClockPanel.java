@@ -3,8 +3,6 @@
  * 
  */
 
-import java.io.IOException;
-import java.io.File;
 
 import java.lang.Math;
 
@@ -16,8 +14,6 @@ import java.awt.Image;
 import java.awt.BasicStroke;
 
 import javax.swing.JPanel;
-
-import javax.imageio.ImageIO;
 
 public class ClockPanel extends JPanel {
     private int hour, minute, second;
@@ -32,12 +28,8 @@ public class ClockPanel extends JPanel {
         loadImages();
     }
     private void loadImages() {
-        try {
-            backClockImage = ImageIO.read(new File("res//Analog-Clock-Background-New.png"));
-            backHandImage = ImageIO.read(new File("res//Clock-Hand-Background.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        backClockImage = ResourseLoader.getImage("Analog-Clock.png");
+        backHandImage = ResourseLoader.getImage("Clock-Hand.png");
     }
 
     public void setTime(int hour, int minute, int second) {
@@ -189,9 +181,6 @@ public class ClockPanel extends JPanel {
         g2d.setStroke(new BasicStroke(5));
         g2d.drawLine(secBacktipX, secBacktipY, secPositionX, secPositionY);
         g2d.fillOval(originX - 10, originY - 10, 20, 20);
-        
-
-        System.out.println("Degree = " + " "+ hrDegree + " "+ minDegree + " " + secDegree );
-       
+               
     }
 }
